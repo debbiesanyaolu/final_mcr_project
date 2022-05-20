@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <span class="desk">You're on light desktop mode</span>
+    <span class="mobile">You're on dark mobile mode</span>
+    <header>
+        <nav>
+            <div class ="boxb">
+                <div class ="searchb">
+                    <a href="{{ url_for('my_view.home') }}"><li>Home</li></a>
+                    <a href="{{ url_for('my_view.aboutmcr') }}"><li>About Manchester</li></a>
+                    <a href="{{ url_for('my_view.aboutldn') }}"><li>About London</li></a>
+                    <a href="{{ url_for('my_view.aboutliv') }}"><li>About Liverpool</li></a>
+                <a href="{{ url_for('my_view.aboutbirm') }}"><li>About Birmingham</li></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <div class="box">
+            <div class="search">
+                <input type=" text" autocomplete="off" class="Search_bar" name="city" placeholder="Search for a City..."/>
+                <button type="sumbit">Search</button>
+            </div>
+            <div class="weather">
+                <div class="date">Tuesday 17th May 2022</div>
+                <h2 class="city">Manchester, GB</h2>
+                <h1 class="temperature">18<span>°C</span></h1>
+                <img src="" alt="" class="icon">
+                <div class="hi-low">H:23°C / L:11°C</div>
+                <div class="descirption">Cloudy</div>
+                <div class="humidity">Humidity: 72%</div>
+                <div class="wind">Wind speed 10mph</div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
