@@ -27,6 +27,7 @@
             </div>
         </nav>
     </header>
+    <div id="wbox">
         <div class="box">
             <div class="search">
                 <input type=" text" autocomplete="off" class="Search_bar" name="city" placeholder="Search for a City..."/>
@@ -43,7 +44,10 @@
                 <div class="wind">Wind speed 10mph</div>
             </div>
         </div>
+        <div id="cbox">
         {% block content %}
         {% endblock %}
+        </div>
+    </div>
     </body>
 </html>

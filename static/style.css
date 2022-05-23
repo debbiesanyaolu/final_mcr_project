@@ -5,7 +5,7 @@
 @media (orientation: landscape) {
     body {
         background-color: antiquewhite;
-        color: black
+        color: black;
     }
 
     .desk{
@@ -13,20 +13,37 @@
     }
 }
 
-@media (orientation: portait) {
+@media (orientation: portrait) {
     body {
-        background-color: black;
-        color: antiquewhite
+        background-color: antiquewhite;
+        color: black;
+        flex: center;
     }
 
-    .mobile{
+    /* .mobile{
         display: inline-block;
+    } */
+}
+
+@media screen and (max-width:500px) {
+    body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #wbox {
+        flex-direction: column;
+        width: 87%;
+    } 
+    .box {
+        /* width: 87%; */
+        margin: 6px;
     }
 }
 
 body {
-    display: flex;
-    justify-content: left;
+    /* display: flex;
+    justify-content: left; */
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -34,8 +51,19 @@ body {
     background: #ffe0e3;
     background-image: url('https://images.unsplash.com/photo-1651257409478-440b9c4805b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3VubnklMjBtYW5jaGVzdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     font-size: 120%;
+}
+
+#wbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cbox {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.7)
 }
 
 .box {
@@ -43,9 +71,9 @@ body {
     color: rgb(0, 0, 0); 
     padding: 2em;
     border-radius: 60px;
-    width: 100%;
-    max-width: 420px;
-    margin: 1em;
+    /* width: 100%; */
+    max-width: 500px;
+    margin: 12px;
     box-shadow: 1em 20px;
 }
 
@@ -113,16 +141,6 @@ nav a:hover,
 nav a li:hover {
     text-decoration: transparent;
     color: #ffe0e3;
-}
-
-p {
-    font-size: medium;
-    display: flex;
-    padding: 2em;
-    border-radius: 60px;
-    /* width: 100%;
-    /* max-width: 420px;
-    margin: 1em; */
 }
 
 footer {
